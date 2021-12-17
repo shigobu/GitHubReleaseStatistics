@@ -82,6 +82,7 @@ finally
     tokenSource.Dispose();
 }
 
+return;
 //end of main method
 
 /// <summary>
@@ -100,3 +101,21 @@ async Task StartStatistics(CancellationToken token)
     }
 }
 
+/// <summary>
+/// このアプリが置いてあるDirectoryを取得します。
+/// </summary>
+/// <returns>このアプリが置いてあるDirectory</returns>
+string GetThisAppDirectory()
+{
+    string appPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+    return Path.GetDirectoryName(appPath);
+}
+
+/// <summary>
+/// githubから取得できる前回のReleases情報のJsonファイル名
+/// </summary>
+/// <returns></returns>
+string GetPrevReleasesInformationJson()
+{
+    return Path.Combine(GetThisAppDirectory(), "PrevReleasesInformation.json");
+}
