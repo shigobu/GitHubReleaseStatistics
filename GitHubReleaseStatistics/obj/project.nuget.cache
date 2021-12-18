@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G6HuofdBLy6tRUL/EC4IoT8rmz+UsIe38xyHZt1rlukPWNnA/Du+bo5e3lrM4rhnv+H7FpYD6lkzusYsaKkxQQ==",
+  "dgSpecHash": "TGNlRKcB2iXcbDSf1uhXrQYvvXYLFjLbba5AenqL8Ol5xVWxmRQwP70iJHui4J6j7JOV+Ij7EBWThdPs2M8V/g==",
   "success": true,
-  "projectFilePath": "D:\\user\\笠松\\ドキュメント\\VS2017\\GitHubReleaseStatistics\\GitHubReleaseStatistics\\GitHubReleaseStatistics.csproj",
+  "projectFilePath": "/home/pi/Documents/GitHubReleaseStatistics/GitHubReleaseStatistics/GitHubReleaseStatistics.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

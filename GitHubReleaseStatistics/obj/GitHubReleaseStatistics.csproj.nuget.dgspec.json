@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\user\\笠松\\ドキュメント\\VS2017\\GitHubReleaseStatistics\\GitHubReleaseStatistics\\GitHubReleaseStatistics.csproj": {}
+    "/home/pi/Documents/GitHubReleaseStatistics/GitHubReleaseStatistics/GitHubReleaseStatistics.csproj": {}
   },
   "projects": {
-    "D:\\user\\笠松\\ドキュメント\\VS2017\\GitHubReleaseStatistics\\GitHubReleaseStatistics\\GitHubReleaseStatistics.csproj": {
+    "/home/pi/Documents/GitHubReleaseStatistics/GitHubReleaseStatistics/GitHubReleaseStatistics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\user\\笠松\\ドキュメント\\VS2017\\GitHubReleaseStatistics\\GitHubReleaseStatistics\\GitHubReleaseStatistics.csproj",
+        "projectUniqueName": "/home/pi/Documents/GitHubReleaseStatistics/GitHubReleaseStatistics/GitHubReleaseStatistics.csproj",
         "projectName": "GitHubReleaseStatistics",
-        "projectPath": "D:\\user\\笠松\\ドキュメント\\VS2017\\GitHubReleaseStatistics\\GitHubReleaseStatistics\\GitHubReleaseStatistics.csproj",
-        "packagesPath": "C:\\Users\\笠松茂信\\.nuget\\packages\\",
-        "outputPath": "D:\\user\\笠松\\ドキュメント\\VS2017\\GitHubReleaseStatistics\\GitHubReleaseStatistics\\obj\\",
+        "projectPath": "/home/pi/Documents/GitHubReleaseStatistics/GitHubReleaseStatistics/GitHubReleaseStatistics.csproj",
+        "packagesPath": "/home/pi/.nuget/packages/",
+        "outputPath": "/home/pi/Documents/GitHubReleaseStatistics/GitHubReleaseStatistics/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\笠松茂信\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/pi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.c1.grapecity.com/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/pi/.dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

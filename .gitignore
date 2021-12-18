@@ -1,2 +1,6 @@
 bin
 /GitHubReleaseStatistics/obj/Debug
+GitHubReleaseStatistics/obj/GitHubReleaseStatistics.csproj.nuget.dgspec.json
+GitHubReleaseStatistics/obj/GitHubReleaseStatistics.csproj.nuget.g.props
+GitHubReleaseStatistics/obj/project.assets.json
+GitHubReleaseStatistics/obj/project.nuget.cache
