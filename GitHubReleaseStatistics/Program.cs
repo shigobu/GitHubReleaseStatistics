@@ -94,6 +94,11 @@ async Task StartStatistics(CancellationToken token)
     {
         while (!token.IsCancellationRequested)
         {
+            //毎時0分に実行
+            if (DateTime.Now.Minute != 0)
+            {
+                continue;
+            }
             await Task.Delay(1000);
             //throw new Exception("えくせぷしょん");
             //break;
