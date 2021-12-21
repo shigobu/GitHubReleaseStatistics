@@ -45,7 +45,7 @@ Console.WriteLine($"ユーザー名:{githubUserName} リポジトリ名:{githubR
 
 var tokenSource = new CancellationTokenSource();
 CancellationToken token = tokenSource.Token;
-Task githubTask = StartStatistics(token);
+Task githubTask = Task.Run(() => StartStatistics(token));
 
 Task readLineTask = Task.Run(() =>
 {
@@ -92,17 +92,47 @@ async Task StartStatistics(CancellationToken token)
 {
     using(HttpClient httpClient = new HttpClient())
     {
+        bool needsExecution = true;
+
         while (!token.IsCancellationRequested)
         {
             //毎時0分に実行
-            if (DateTime.Now.Minute != 0)
+            if (DateTime.Now.Second != 0)
+            {
+                needsExecution = true;
+                continue;
+            }
+
+            if (!needsExecution)
             {
                 continue;
             }
-            await Task.Delay(1000);
-            //throw new Exception("えくせぷしょん");
-            //break;
+
+            Console.WriteLine(DateTime.Now);
+
+            if (!File.Exists(GetPrevReleasesInformationJson()))
+            {
+                string releaseInfoJson = await GetReleaseInfoJson(httpClient, githubUserName, githubRepositoryName);
+                using (StreamWriter writer = new StreamWriter(GetPrevReleasesInformationJson()))
+                {
+                    writer.Write(releaseInfoJson);
+                }
+            }
+
+            needsExecution = false;
         }
+    }
+}
+
+
+async Task<string> GetReleaseInfoJson(HttpClient httpClient, string userName, string repositoryName)
+{
+    var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.github.com/repos/{userName}/{repositoryName}/releases");
+    request.Headers.Add("Accept", "application/vnd.github.v3+json");
+    request.Headers.Add("User-Agent", "shigobu");
+    using (var result = await httpClient.SendAsync(request))
+    {
+        return await result.Content.ReadAsStringAsync();
     }
 }
 
